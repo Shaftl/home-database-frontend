@@ -1,0 +1,249 @@
+.dashboard {
+  width: 100%;
+}
+
+/* ✅ allow wrapping on small screens */
+.content {
+  width: 100%;
+  min-height: calc(100vh - 7rem);
+  padding: 2rem 3rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+/* ===== Sidebar ===== */
+.sidebar {
+  width: 20rem;
+  height: 100%;
+  min-width: 0;
+  flex: 0 0 auto;
+}
+
+.sidebarInner {
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+}
+
+.sidebarContent {
+  width: 100%;
+  height: 100%;
+}
+
+/* ✅ rows can wrap + not overflow */
+.sidebarRow {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #141d3d0f;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  min-width: 0;
+}
+
+.rowPrice {
+  font-weight: 500;
+  flex: 0 0 auto;
+  white-space: nowrap;
+}
+
+.rowPriceName {
+  flex: 1 1 auto;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* ===== Main ===== */
+.main {
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+/* ✅ allows inner blocks to wrap */
+.mainInner {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 3rem;
+  flex-wrap: wrap;
+  min-width: 0;
+}
+
+.contentBox {
+  width: 100%;
+  height: 100%;
+  border: 1px solid #141d3d0f;
+  min-width: 0;
+}
+
+.expenses .btn,
+.request .btn {
+  width: 100%;
+  display: inline-block;
+  font-size: 1.8rem;
+  padding: 0.6rem 3.2rem;
+  background: #222;
+  border: none;
+  outline: none;
+  color: #fff;
+}
+
+/* ✅ allow cards to shrink */
+.expenses {
+  width: 35rem;
+  height: 100%;
+  min-width: 0;
+  flex: 1 1 35rem;
+}
+
+.request {
+  width: 40rem;
+  height: 100%;
+  min-width: 0;
+  flex: 1 1 40rem;
+}
+
+/* ✅ rows wrap nicely */
+.contentBoxRow {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #141d3d0f;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-width: 0;
+}
+
+/* prevent text overflow */
+.contentBoxRowName {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.contentBoxRowPrice {
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* ===== Accordion behavior (desktop) ===== */
+.contentBoxRowAcc {
+  width: 100%;
+  transform: scale(0.8);
+  position: relative;
+  height: 0 !important;
+  overflow: hidden;
+}
+
+.contentBoxRowAcc::before {
+  content: "";
+  position: absolute;
+  top: -1.2rem;
+  right: -2rem;
+  width: 1px;
+  height: 100%;
+  background-color: #141d3d1a;
+}
+
+.contentBoxRowHover:hover .contentBoxRowAcc {
+  height: 100% !important;
+}
+
+/* ========== Responsive Breakpoints ========== */
+
+/* Tablet / small laptop */
+@media (max-width: 1024px) {
+  .content {
+    padding: 1.6rem 2rem;
+    gap: 2rem;
+  }
+  .mainInner {
+    gap: 2rem;
+  }
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .content {
+    padding: 1.2rem 1.2rem;
+    gap: 1.2rem;
+  }
+
+  /* sidebar becomes full width */
+  .sidebar {
+    width: 100%;
+  }
+
+  .main {
+    width: 100%;
+  }
+
+  .mainInner {
+    gap: 1.2rem;
+  }
+
+  .expenses,
+  .request {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+
+  /* make long text wrap rather than overflow */
+  .rowPriceName,
+  .contentBoxRowName {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: initial;
+    word-break: break-word;
+  }
+
+  /* ✅ On touch devices hover is useless: make accordion always visible */
+  .contentBoxRowAcc {
+    transform: scale(1);
+    height: auto !important;
+    overflow: visible;
+  }
+  .contentBoxRowAcc::before {
+    display: none;
+  }
+}
+
+/* Ultra small devices (<= 250px) */
+@media (max-width: 250px) {
+  .content {
+    padding: 0.8rem;
+    gap: 0.8rem;
+  }
+
+  .expenses .btn,
+  .request .btn {
+    padding: 0.6rem 1rem;
+    font-size: 1.4rem;
+  }
+
+  .sidebarRow,
+  .contentBoxRow {
+    padding: 0.6rem;
+    font-size: 1.2rem;
+    gap: 0.6rem;
+    flex-wrap: wrap;
+  }
+
+  .rowPrice,
+  .contentBoxRowPrice {
+    font-size: 1.2rem;
+  }
+}

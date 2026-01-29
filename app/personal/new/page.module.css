@@ -1,0 +1,134 @@
+/* ======================================
+   page.module.css
+   CSS module to sit next to the component
+   ====================================== */
+
+:root {
+  --border: #e6eaee;
+  --muted: #666;
+  --bg: #ffffff;
+  --surface: #fff;
+  --accent: #fca311;
+}
+
+.container {
+  width: 100%;
+  font-family: inherit;
+  color: #111;
+  box-sizing: border-box;
+  padding: 18px 20px;
+}
+
+.pageTitle {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0 0 12px 0;
+}
+
+.card {
+  border-top: 1px solid var(--border);
+  padding: 16px;
+  background: var(--surface);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.input {
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  min-height: 44px;
+  box-sizing: border-box;
+  font-size: 1.4rem;
+  background: var(--bg);
+  outline: none;
+}
+
+.input:focus {
+  border-color: var(--accent);
+}
+
+.inputWide {
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  min-height: 80px;
+  box-sizing: border-box;
+  font-size: 1.4rem;
+  background: var(--bg);
+  outline: none;
+}
+
+.textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+}
+.smallField {
+  flex: 1 1 120px;
+}
+
+.formRow {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.label {
+  display: block;
+  margin-bottom: 6px;
+  color: var(--muted);
+}
+
+.fileInput {
+  border: none;
+}
+.filesList {
+  margin-top: 8px;
+}
+.fileItem {
+  margin-bottom: 6px;
+  color: var(--muted);
+}
+
+.actionsRow {
+  display: flex;
+  gap: 8px;
+  margin-top: 12px;
+}
+
+.button {
+  padding: 10px 14px;
+  border: none;
+  cursor: pointer;
+  background: var(--accent);
+  color: white;
+  min-width: 100px;
+  font-weight: 700;
+}
+
+.buttonSecondary {
+  background: transparent;
+  color: var(--muted);
+  border: 1px solid var(--border);
+}
+
+.button[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+@media (max-width: 800px) {
+  .row {
+    flex-direction: column;
+  }
+  .actionsRow {
+    flex-direction: column;
+  }
+}

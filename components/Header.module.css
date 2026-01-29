@@ -1,0 +1,210 @@
+/* ---------------------------------------------------- */
+/* Header.module.css
+   - small adjustments: make rightNav positioned so the absolute card is placed relative to it
+*/
+
+.header {
+  width: 100%;
+  height: 6rem;
+  border-bottom: 1px solid #e9ecef;
+  padding: 0 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 2.6rem;
+  height: auto;
+}
+
+/* make rightNav positioned so profileCard absolute uses it as anchor */
+.rightNav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.4rem;
+  position: relative;
+}
+
+/* request button */
+.requestBtn {
+  padding: 0.5rem 1.6rem;
+  cursor: pointer;
+  background: transparent;
+  border: 1px solid #e9ecef;
+  border-radius: 30rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 1.3rem;
+  color: inherit;
+  text-decoration: none;
+}
+
+/* svg sizing (keeps your original style) */
+.rightNav svg {
+  width: 1.4rem;
+}
+
+/* profile circular avatar */
+.profile {
+  width: 3.6rem;
+  height: 3.6rem;
+  background-color: #fca311; /* kept as requested */
+  border-radius: 50%;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.06);
+  position: relative;
+}
+
+.avatarImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* notifications (kept) */
+.notif {
+  width: 3.6rem;
+  height: 3.6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.notif svg {
+  width: 1.8rem !important;
+  height: 1.8rem !important;
+}
+
+/* profile card (mini card) — anchored to .rightNav */
+.profileCard {
+  position: absolute;
+  right: 0;
+  top: calc(100% + 0.6rem);
+  width: 26rem;
+  background: #ffffff;
+  box-shadow: 0 6px 24px rgba(15, 23, 42, 0.146);
+  border: 1px solid #eef2f6;
+  padding: 1.2rem;
+  z-index: 60;
+  font-family: inherit;
+}
+
+/* card header */
+.cardHeader {
+  display: flex;
+  gap: 0.8rem;
+  align-items: center;
+  padding-bottom: 0.6rem;
+  border-bottom: 1px solid #f3f6f8;
+}
+
+.cardAvatar {
+  width: 4rem;
+  height: 4rem;
+  border-radius: 30rem;
+  object-fit: cover;
+  background: #fca311;
+}
+
+.cardTitle {
+  display: flex;
+  flex-direction: column;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 1.4rem;
+}
+
+.username {
+  font-size: 1.2rem;
+  color: #6b7280;
+}
+
+/* card body */
+.cardBody {
+  padding: 0.7rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.infoRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.2rem;
+  color: #374151;
+}
+
+.infoValue {
+  font-size: 1.2rem;
+  color: #6b7280;
+}
+
+/* card footer */
+.cardFooter {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: 0.6rem;
+  border-top: 1px solid #f3f6f8;
+}
+
+/* sign out button */
+.signOutBtn {
+  padding: 0.45rem 0.9rem;
+  border-radius: 5rem;
+  border: 1px solid #e9ecef;
+  background: transparent;
+  background: #ff0000ae;
+  cursor: pointer;
+  font-weight: 600;
+  color: #fff;
+}
+
+/* new */
+/* admin links shown in profile card (superadmin only) */
+.adminLinks {
+  margin-top: 0.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding-top: 0.4rem;
+  border-top: 1px dashed #f1f5f8; /* subtle separator under role */
+}
+
+.adminLinksTitle {
+  font-weight: 700;
+  color: #111;
+  font-size: 1.2rem;
+}
+
+.adminLink {
+  text-decoration: none;
+  color: #fca311; /* accent color matching your UI */
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 0.25rem 0;
+}
+
+/* hover / focus affordance for keyboard users */
+.adminLink:hover,
+.adminLink:focus {
+  text-decoration: underline;
+  outline: none;
+}

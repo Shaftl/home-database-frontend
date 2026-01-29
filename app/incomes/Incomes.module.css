@@ -1,0 +1,284 @@
+:root {
+  --border: #e6eaee;
+  --muted: #666;
+  --bg: #ffffff;
+  --surface: #fff;
+  --accent: #fca311;
+}
+
+/* page base */
+.dashboard {
+  width: 100%;
+  font-family: inherit;
+  color: #111;
+  box-sizing: border-box;
+  padding: 18px 20px;
+}
+
+/* header row: left title, right total */
+.headerRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 14px;
+}
+
+.headerLeft {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.requestTitle {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.headerSub {
+  font-size: 1.2rem;
+  color: var(--muted);
+}
+
+/* right side: total and small meta */
+.headerRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 6px;
+}
+
+.requestTotal {
+  background-color: #111;
+  color: #ffffff;
+  padding: 8px 12px;
+  font-weight: 800;
+  font-size: 2rem;
+  border: 1px solid var(--border);
+  /* no radius, no shadow */
+}
+
+.requestTotalCurrency {
+  font-weight: 600;
+  font-size: 2rem;
+  /* color: var(--muted); */
+}
+
+.smallMeta {
+  font-size: 1.4rem;
+  color: var(--muted);
+}
+
+/* content area */
+.contentBox {
+  width: 100%;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  overflow: auto;
+  box-sizing: border-box;
+  /* no radius, no shadow */
+  padding: 0;
+  height: calc(100vh - 10.5rem); /* adapt to your layout header height */
+}
+
+.boxInner {
+  padding: 18px;
+}
+
+/* form */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.formRow {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  width: 100%;
+}
+
+.input {
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  min-height: 40px;
+  box-sizing: border-box;
+  font-size: 1.4rem;
+  background: var(--bg);
+  flex: 1;
+  outline: none;
+}
+
+.input:focus {
+  border-color: var(--accent);
+}
+
+.inputDate {
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  min-height: 40px;
+  box-sizing: border-box;
+  font-size: 1.4rem;
+  flex: 0 0 160px;
+  outline: none;
+}
+
+.inputWide {
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  min-height: 40px;
+  width: 100%;
+  box-sizing: border-box;
+  font-size: 1.4rem;
+  background: var(--bg);
+  outline: none;
+}
+
+.button {
+  padding: 10px 14px;
+  border: none;
+  cursor: pointer;
+  background: var(--accent);
+  color: white;
+  min-width: 100px;
+}
+
+/* info */
+.info {
+  margin-bottom: 12px;
+  color: var(--muted);
+}
+
+/* totals row small */
+.totalsRowSmall {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding-top: 6px;
+  font-size: 1.4rem;
+  color: var(--muted);
+  margin-bottom: 12px;
+}
+
+.totalsLabel {
+  color: #333;
+  font-weight: 500;
+}
+
+.totalsValue {
+  color: #111;
+  font-weight: 700;
+}
+
+/* list of incomes */
+.itemList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-height: calc(100% - 220px);
+  overflow: auto;
+  padding-right: 6px;
+}
+
+/* each income row (clean card-like without radius/shadow) */
+.incomeRow {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  border-top: 1px solid var(--border);
+  align-items: flex-start;
+  box-sizing: border-box;
+  background: transparent;
+}
+
+.incomeLeft {
+  width: 10.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid rgba(20, 29, 61, 0.03);
+  padding-left: 10px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+
+.incomeAmount {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #111;
+}
+
+.incomeRight {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.incomeTitleRow {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.incomeTitle {
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #111;
+}
+
+.incomeDate {
+  font-size: 1.2rem;
+  color: var(--muted);
+}
+
+/* helpers */
+.small {
+  color: var(--muted);
+  font-size: 1.2rem;
+}
+
+.emptyMsg {
+  padding: 18px;
+  color: var(--muted);
+}
+
+/* responsive */
+@media (max-width: 1000px) {
+  .contentBox {
+    height: auto;
+  }
+
+  .formRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .headerRow {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .headerRight {
+    align-items: flex-start;
+  }
+
+  .incomeLeft {
+    width: 100%;
+    border-left: none;
+    border-top: 1px solid var(--border);
+    padding-left: 0;
+    padding-top: 10px;
+  }
+
+  .incomeRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

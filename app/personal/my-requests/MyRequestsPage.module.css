@@ -1,0 +1,237 @@
+/* ======================================
+   MyRequestsPage.module.css
+   Use this CSS module next to the component
+   ====================================== */
+
+:root {
+  --border: #e6eaee;
+  --muted: #666;
+  --bg: #ffffff;
+  --surface: #fff;
+  --accent: #fca311;
+}
+
+/* page base */
+.container {
+  width: 100%;
+  font-family: inherit;
+  color: #111;
+  box-sizing: border-box;
+  padding: 18px 20px;
+}
+
+/* header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.pageTitle {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+.input {
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  min-height: 44px;
+  box-sizing: border-box;
+  font-size: 1.4rem;
+  background: var(--bg);
+  outline: none;
+}
+
+.input:focus {
+  border-color: var(--accent);
+}
+
+.inputWide {
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  min-height: 44px;
+  box-sizing: border-box;
+  font-size: 1.4rem;
+  background: var(--bg);
+  outline: none;
+  flex: 1 1 300px;
+}
+
+.textarea {
+  min-height: 80px;
+  resize: vertical;
+}
+
+.row {
+  display: flex;
+  gap: 8px;
+  margin-top: 8px;
+}
+.smallField {
+  flex: 1 1 120px;
+}
+
+.button {
+  padding: 10px 14px;
+  border: none;
+  cursor: pointer;
+  background: var(--accent);
+  color: white;
+  min-width: 100px;
+  font-weight: 700;
+}
+
+.button[disabled] {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.buttonSecondary {
+  padding: 10px 14px;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  background: transparent;
+  color: var(--accent);
+  min-width: 100px;
+  font-weight: 700;
+  margin-right: 8px;
+}
+
+.buttonTertiary {
+  padding: 10px 14px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  background: transparent;
+  color: var(--muted);
+  min-width: 100px;
+  font-weight: 700;
+}
+
+.emptyMsg {
+  padding: 18px 0;
+  color: var(--muted);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.card {
+  border-top: 1px solid var(--border);
+  padding: 12px 0;
+  box-sizing: border-box;
+  background: transparent;
+}
+.withMargin {
+  margin-bottom: 12px;
+}
+.cardInner {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+}
+.cardLeft {
+  flex: 1;
+}
+.cardTitle {
+  display: block;
+  font-weight: 700;
+  font-size: 1.4rem;
+  color: #111;
+}
+.small {
+  color: var(--muted);
+  font-size: 1rem;
+}
+.note {
+  margin-top: 6px;
+  font-size: 1rem;
+  color: var(--muted);
+}
+
+.cardRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  min-width: 160px;
+}
+.amountBlock {
+  text-align: right;
+  font-size: 1.4rem;
+  color: #111;
+}
+.amountValue {
+  font-weight: 700;
+}
+.viewLink {
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--accent);
+  font-size: 1.2rem;
+}
+
+.reviewSection {
+  margin-top: 12px;
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+}
+.sectionTitle {
+  margin: 0 0 10px 0;
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+.formRow {
+  margin-bottom: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.buttonsRow {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+
+.attachments ul {
+  margin: 6px 0 0 14px;
+}
+.approvalItem {
+  padding: 6px;
+  border-bottom: 1px solid #f1f1f1;
+}
+.timestamp {
+  font-size: 1.4rem;
+  color: #999;
+}
+.approvedAmount {
+  margin-top: 6px;
+  font-weight: 600;
+}
+.approvedBlock {
+  color: green;
+}
+.rejectedBlock {
+  color: red;
+}
+
+@media (max-width: 1000px) {
+  .cardInner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .cardRight {
+    align-items: flex-start;
+    min-width: auto;
+  }
+  .row {
+    flex-direction: column;
+  }
+}

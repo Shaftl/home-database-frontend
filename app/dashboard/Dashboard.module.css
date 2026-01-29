@@ -1,0 +1,317 @@
+:root {
+  --border: #e6eaee;
+  --muted: #666;
+  --bg: #ffffff;
+  --surface: #fff;
+}
+
+/* base */
+.dashboard {
+  width: 100%;
+  font-family: inherit;
+}
+
+/* container */
+.content {
+  width: 100%;
+  height: calc(100vh - 6.5rem);
+  padding: 16px 20px;
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+/* main area (مصارف) */
+.main {
+  flex: 1 1 auto;
+  min-width: 0;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+/* request (مصارف) panel */
+.request {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-sizing: border-box;
+}
+
+/* header where total resides (slightly larger fonts) */
+.requestHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 4px 2px;
+}
+
+.requestTitle {
+  font-size: 2rem; /* slightly bigger */
+  font-weight: 800;
+}
+
+.requestTotal {
+  background: #111;
+  color: #fff;
+  padding: 1rem 3rem;
+  /* border-radius: 6px; */
+  font-weight: 800;
+  font-size: 2rem;
+}
+
+/* content box area */
+.contentBox {
+  width: 100%;
+  height: calc(100% - 52px);
+  border: 1px solid var(--border);
+  background: var(--surface);
+  /* border-radius: 8px; */
+  overflow: auto;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+.boxInner {
+  padding: 14px;
+}
+
+/* grid of category cards (2 columns) */
+.categoryGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  align-items: flex-start;
+}
+
+/* each category card */
+.categoryCard {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  border: 1px solid var(--border);
+  /* border-radius: 8px; */
+  background: var(--bg);
+  height: 100%;
+  min-height: 10rem;
+  box-sizing: border-box;
+}
+
+/* left: big total */
+.categoryLeft {
+  width: 10rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: 1px dashed rgba(20, 29, 61, 0.04);
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+
+.categoryTotal {
+  font-size: 1.6rem; /* bigger total */
+  font-weight: 900;
+  color: #111;
+  text-align: center;
+}
+
+/* right: title + items */
+.categoryRight {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  box-sizing: border-box;
+}
+
+.categoryTitleRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.categoryTitle {
+  font-size: 1.4rem; /* bit bigger */
+  font-weight: 800;
+  color: #111;
+}
+
+.categoryCount {
+  font-size: 1.2rem;
+  color: var(--muted);
+}
+
+/* items list inside category card */
+.itemList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 120px;
+  overflow: auto;
+  padding-right: 4px;
+}
+
+/* each item row */
+.itemRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 4px 0;
+  border-bottom: 1px dashed rgba(20, 29, 61, 0.03);
+  box-sizing: border-box;
+}
+
+.itemRow:last-child {
+  border-bottom: none;
+}
+
+.itemTitle {
+  font-size: 1.3rem;
+  color: #111;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 6px;
+}
+
+.itemAmount {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #111;
+  text-align: left;
+}
+
+/* empty */
+.emptyMsg {
+  padding: 18px;
+  color: var(--muted);
+}
+
+/* VISUAL COLUMN (right): pie + totals under it */
+.visualColumn {
+  width: 220px;
+  min-width: 220px;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  box-sizing: border-box;
+}
+
+.visualInner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+/* PIE container */
+.pieLarge {
+  position: relative;
+  width: 160px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.pieCenterLarge {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  pointer-events: none;
+}
+
+.pieCenterNumber {
+  font-size: 15px;
+  font-weight: 800;
+}
+.pieCenterLabel {
+  font-size: 12px;
+  color: var(--muted);
+}
+
+/* totals area under the chart */
+.totalsBox {
+  width: 100%;
+  padding: 8px;
+  border-radius: 6px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: transparent;
+}
+
+.totalsRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 6px 4px;
+  font-size: 1.2rem;
+  border-bottom: 1px dashed rgba(20, 29, 61, 0.04);
+}
+
+.totalsLabel {
+  color: #333;
+  font-weight: 500;
+}
+.totalsValue {
+  color: #111;
+  font-weight: 700;
+}
+
+.totalsValueGreen {
+  color: #2f855a;
+  font-weight: 900;
+}
+.totalsValueRed {
+  color: #c53030;
+  font-weight: 900;
+}
+
+.totalsRowSmall {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding-top: 6px;
+  font-size: 1rem;
+  color: var(--muted);
+}
+
+/* responsive */
+@media (max-width: 1000px) {
+  .content {
+    padding: 12px;
+    flex-direction: column;
+    height: auto;
+    gap: 12px;
+  }
+  .visualColumn {
+    width: 100%;
+    min-width: 0;
+    order: 3;
+  }
+  .pieLarge {
+    width: 120px;
+    height: 120px;
+  }
+  .categoryGrid {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+  .categoryLeft {
+    width: 100px;
+  }
+}

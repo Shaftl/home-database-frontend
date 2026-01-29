@@ -1,0 +1,40 @@
+/* frontend/components/PersonalExpenseForm.module.css */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  max-width: 720px;
+  margin: 10px 0;
+}
+.input,
+.textarea,
+.select {
+  padding: 8px;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+.row {
+  display: flex;
+  gap: 8px;
+}
+.small {
+  flex: 1;
+}
+.button {
+  padding: 10px 12px;
+  border-radius: 6px;
+  cursor: pointer;
+  border: none;
+  background: #1976d2;
+  color: #fff;
+}
+.secondary {
+  background: #666;
+}
+.card {
+  border: 1px solid #eee;
+  padding: 12px;
+  border-radius: 8px;
+  background: #fff;
+}

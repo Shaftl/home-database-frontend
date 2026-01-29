@@ -1,0 +1,213 @@
+:root {
+  --border: #e6eaee;
+  --muted: #666;
+  --bg: #ffffff;
+  --surface: #fff;
+  --accent: #fca311;
+}
+
+/* page base */
+.container {
+  width: 100%;
+  font-family: inherit;
+  color: #111;
+  box-sizing: border-box;
+  padding: 18px 20px;
+}
+
+/* header */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.pageTitle {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+/* controls row */
+.controlsRow {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.input {
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  min-height: 44px;
+  box-sizing: border-box;
+  font-size: 1.2rem;
+  background: var(--bg);
+  outline: none;
+}
+
+.input:focus {
+  border-color: var(--accent);
+}
+
+/* wider input used for note in create form */
+.inputWide {
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  min-height: 44px;
+  box-sizing: border-box;
+  font-size: 1.2rem;
+  background: var(--bg);
+  outline: none;
+  flex: 1 1 300px;
+}
+
+.select {
+  padding: 10px 12px;
+  border: 1px solid var(--border);
+  min-height: 44px;
+  font-size: 1.2rem;
+  background: var(--bg);
+  outline: none;
+}
+
+/* buttons */
+.button {
+  padding: 10px 14px;
+  border: none;
+  cursor: pointer;
+  background: var(--accent);
+  color: white;
+  min-width: 100px;
+  font-weight: 700;
+}
+
+/* create section */
+.createSection {
+  margin: 16px 0;
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+}
+
+.sectionTitle {
+  margin: 0 0 10px 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+/* form used for create */
+.createForm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  align-items: center;
+}
+
+/* small helper text */
+.info {
+  margin-bottom: 12px;
+  color: var(--muted);
+}
+
+/* loading / empty */
+.emptyMsg {
+  padding: 18px 0;
+  color: var(--muted);
+}
+
+/* list */
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+/* card */
+.card {
+  border-top: 1px solid var(--border);
+  padding: 12px 0;
+  box-sizing: border-box;
+  background: transparent;
+}
+
+.cardInner {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.cardLeft {
+  flex: 1;
+}
+
+.cardTitle {
+  display: block;
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: #111;
+}
+
+.small {
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+/* note under title */
+.note {
+  margin-top: 6px;
+  font-size: 1rem;
+  color: var(--muted);
+}
+
+/* right block with amounts and view link */
+.cardRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  min-width: 160px;
+}
+
+.amountBlock {
+  text-align: right;
+  font-size: 0.98rem;
+  color: #111;
+}
+
+.amountValue {
+  font-weight: 700;
+}
+
+.viewLink {
+  text-decoration: none;
+  font-weight: 700;
+  color: var(--accent);
+  font-size: 1rem;
+}
+
+/* responsive */
+@media (max-width: 1000px) {
+  .controlsRow {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .createForm {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cardInner {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .cardRight {
+    align-items: flex-start;
+    min-width: auto;
+  }
+}

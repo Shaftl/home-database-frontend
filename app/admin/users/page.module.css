@@ -1,0 +1,173 @@
+/* ======================================
+   page.module.css
+   Adapted from user's base CSS, converted to module
+   No border-radius or shadow used. font-size approx 1.4rem as requested.
+   ====================================== */
+
+.dashboard {
+  width: 100%;
+  font-size: 1.4rem;
+  color: #111;
+}
+
+.contentWrap {
+  width: 100%;
+  padding: 2rem 3rem;
+  box-sizing: border-box;
+}
+
+.pageTitle {
+  margin: 0 0 1rem 0;
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.section {
+  margin-bottom: 2rem;
+}
+.sectionTitle {
+  margin: 0 0 0.8rem 0;
+  font-size: 1.4rem;
+  font-weight: 700;
+}
+
+.createForm {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.input,
+.select {
+  padding: 0.6rem 0.9rem;
+  border: 1px solid #141d3d0f;
+  min-height: 44px;
+  box-sizing: border-box;
+  font-size: 1.4rem;
+  background: #fff;
+  outline: none;
+}
+
+.input:focus,
+.select:focus {
+  border-color: #141d3d33;
+}
+
+.select {
+  min-width: 12rem;
+}
+
+.button {
+  padding: 0.6rem 1.6rem;
+  border: none;
+  cursor: pointer;
+  background: #141d3d;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.buttonAlt {
+  padding: 0.6rem 1.2rem;
+  border: 1px solid #141d3d0f;
+  cursor: pointer;
+  background: transparent;
+  color: #141d3d;
+  font-size: 1.4rem;
+}
+
+.buttonDanger {
+  padding: 0.6rem 1.2rem;
+  border: 1px solid #e53935;
+  background: transparent;
+  color: #e53935;
+  cursor: pointer;
+  font-size: 1.4rem;
+}
+
+.emptyMsg {
+  color: #666;
+  padding: 0.6rem 0;
+}
+
+.usersList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  margin-top: 0.8rem;
+}
+
+.userCard {
+  border: 1px solid #141d3d0f;
+  padding: 0.8rem;
+}
+
+.userInner {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.userLeft {
+  flex: 1;
+}
+.userRight {
+  display: flex;
+  align-items: flex-start;
+}
+
+.userTitle {
+  font-weight: 800;
+  font-size: 1.4rem;
+}
+.userDash {
+  font-weight: 600;
+  margin-left: 0.4rem;
+}
+.userEmail {
+  color: #666;
+  font-size: 1.2rem;
+  margin-top: 0.2rem;
+}
+.userRole {
+  color: #666;
+  font-size: 1.2rem;
+  margin-top: 0.2rem;
+}
+
+.actionsGroup {
+  display: flex;
+  gap: 0.6rem;
+}
+
+.editForm {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  min-width: 24rem;
+}
+.editActions {
+  display: flex;
+  gap: 0.6rem;
+  margin-top: 0.4rem;
+}
+
+@media (max-width: 900px) {
+  .contentWrap {
+    padding: 1rem;
+  }
+  .createForm {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .editForm {
+    min-width: auto;
+  }
+  .userInner {
+    flex-direction: column;
+  }
+  .userRight {
+    width: 100%;
+  }
+}

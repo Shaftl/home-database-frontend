@@ -1,0 +1,27 @@
+.notif {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 4rem;
+  height: 4rem;
+  border: 1px solid #e9ecef;
+  border-radius: 50%;
+  padding-top: 0.3rem;
+  position: relative;
+}
+
+.badge {
+  position: absolute;
+  top: -0.2rem;
+  right: -0.2rem;
+}
+
+.badgeStyle {
+  width: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 2rem;
+  background-color: #fca311;
+}
